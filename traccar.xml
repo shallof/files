@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+
+<properties>
+
+    <entry key='config.default'>./conf/default.xml</entry>
+
+    <!--
+
+    This is the main configuration file. All your configuration parameters should be placed in this file.
+
+    Default configuration parameters are located in the "default.xml" file. You should not modify it to avoid issues
+    with upgrading to a new version. Parameters in the main config file override values in the default file. Do not
+    remove "config.default" parameter from this file unless you know what you are doing.
+
+    For list of available parameters see following page: https://www.traccar.org/configuration-file/
+
+    -->
+
+	<entry key='web.port'>8080</entry>
+        <entry key='web.url'>https://track.ababeel.ly</entry>
+
+        <!-- Database settings -->
+        <entry key='database.driver'>com.mysql.cj.jdbc.Driver</entry>
+	<entry key='database.url'>jdbc:mysql://localhost:3306/gpsdb?serverTimezone=UTC&amp;useSSL=false&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;sessionVariables=sql_mode=''</entry>
+        <entry key='database.user'>dbadmin</entry>
+        <entry key='database.password'>dbadmin@admin</entry>
+	
+	<!-- Server settings -->
+    	<entry key='status.timeout'>3600</entry><!-- Seconds -->
+	<entry key='users.defaultDeviceLimit'>0</entry>
+	<entry key='sms.enable'>false</entry>
+
+	<!-- Filters -->
+	<entry key='filter.enable'>true</entry>
+	<entry key='filter.future'>120</entry><!-- Seconds -->
+	<entry key='filter.duplicate'>true</entry>
+	<entry key='filter.zero'>true</entry>
+	<entry key='coordinates.filter'>true</entry>
+	<entry key='coordinates.minError'>5</entry><!-- Meters -->
+	<!-- <entry key='coordinates.maxError'>15</entry> Meters -->
+	
+	<!-- Geocoder settings -->
+	<entry key='geocoder.enable'>false</entry>
+	<entry key='geocoder.reuseDistance'>200</entry>
+
+	<!-- Meters  
+	<entry key='geocoder.onRequest'>true</entry>
+	<entry key='geocoder.ignorePositions '>true</entry>
+	<entry key='geocoder.processInvalidPositions'>true</entry>
+	End of Meters -->
+	
+	<!-- Geolocation settings -->
+    	<entry key='geolocation.enable'>false</entry>
+	<entry key='geolocation.type'>opencellid</entry>
+    	<entry key='geolocation.key'>90a6d5f4c422a9</entry>
+    	<entry key='geolocation.mnc'>01</entry>
+    	<entry key='geolocation.mcc'>606</entry>>
+    	<entry key='geolocation.processInvalidPositions'>true</entry>
+	
+	<!-- Email Settings -->
+	<entry key='mail.smtp.host'>ls36.server.ly</entry>
+    	<entry key='mail.smtp.port'>465</entry>
+    	<entry key='mail.smtp.ssl.enable'>true</entry>
+    	<entry key='mail.smtp.from'>gps@ababeel.ly</entry>
+    	<entry key='mail.smtp.auth'>true</entry>
+    	<entry key='mail.smtp.username'>gps@ababeel.ly</entry>
+  	<entry key='mail.smtp.password'>ababeel8200</entry>
+	
+	<!-- Firebase notifications -->
+	<entry key='notificator.types'>web,mail,firebase</entry>
+	<entry key='notificator.firebase.key'>AAAAV9v31p4:APA91bGdSPNHqeGtpw-xtlRxkvavyt21s2G7SFD_kgQWQc6DSTH87lfFnOhLLOKttStYt5L71BGZ9I1KOVBNvhZfWJvJajmyFMp86nPAedU7zptTZCX2e8qdHy2RVe00Qqj6OLsyyR1F</entry>
+	
+	<!-- Debugging -->
+	<entry key='logger.fullStackTraces'>false</entry>
+	
+	<!-- Protocols -->
+	<entry key='gps103.port'>5001</entry> 
+	<entry key='tk103.port'>5002</entry>
+    	<entry key='gl100.port'>5003</entry>
+    	<entry key='gl200.port'>5004</entry>
+	<entry key='h02.port'>5013</entry>
+	<entry key='meitrack.port'>5020</entry>
+	<entry key='gt06.port'>5023</entry>
+	<entry key='teltonika.port'>5027</entry>
+	<entry key='gator.port'>5052</entry>
+	<entry key='gosafe.port'>5078</entry>
+	<entry key='dualcam.port'>5232</entry>
+
+	<!-- Protocols timeout (Seconds) -->
+	<entry key='gps103.timeout'>70</entry>
+	<entry key='tk103.timeout'>70</entry>
+	<entry key='gl100.timeout'>70</entry>
+	<entry key='gl200.timeout'>70</entry>
+	<entry key='h02.timeout'>70</entry>
+	<entry key='meitrack.timeout'>70</entry>
+	<entry key='gt06.timeout'>70</entry>
+	<entry key='teltonika.timeout'>70</entry>
+	<entry key='gator.timeout'>70</entry>
+	<entry key='gosafe.timeout'>70</entry>	
+	<entry key='dualcam.timeout'>70</entry>
+	
+	<!-- Reporting -->
+	<entry key='processing.copyAttributes.enable'>true</entry>
+	<entry key='processing.copyAttributes'>power,ignition,battery</entry>
+
+</properties>
