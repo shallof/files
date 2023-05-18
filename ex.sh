@@ -1,0 +1,4 @@
+cd files
+git pull
+shallof
+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
